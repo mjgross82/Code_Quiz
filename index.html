@@ -12,19 +12,67 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
   <body>
-    <div class="container-fluid">
-        <header class="row">
-            <h3 class="col-6 text-left" id="hiscore">View High Scores</h2>
-            <h3 class="col-6 text-right" id="timer"></h2>
-        </header>
-        <div class="row">
-            <div class="col-9 offset-md-3 text-left" id="question">Question text</div>
-            <div class="col-9 offset-md-3 text-left" id="answerA">Answer A</div>
-            <div class="col-9 offset-md-3 text-left" id="answerB">Answer B</div>
-            <div class="col-9 offset-md-3 text-left" id="answerC">Answer C</div>
-            <div class="col-9 offset-md-3 text-left" id="answerD">Answer D</div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+      <button id="hiscore" class="btn btn-primary btn-light"><span>View High Scores</span></button>
+      <h3 id="timer" class="text-light">Time Remaining</h3>
+    </nav>
+    <div class="container">        
+      <div class="row">
 
+        <!-- Title Card -->
+        <div class="card mt-4">
+          <h3 class="card-header">Fundamentals of JavaScript</h3>
+          <div class="card-body">
+            <h5 class="card-title">Directions.</h5>
+            <p class="card-text">A timed quiz consisting of five multiple choice questions about the fundamentals of JavaScript. Correct answers add time; incorrect answers take away time. Click start to begin.</p>
+            <button id="button-start" class="btn btn-dark btn-block">Start</button>
+          </div>
+          <div class="card-footer text-muted">
+            Developed by Michael J. Gross
+          </div>
         </div>
+      </div>
+
+      <div class="row">  
+
+        <!-- Questions Card -->
+       <div class="col-lg-6">
+          <div class="card mt-4">
+            <h3 class="card-header">Question #</h3>
+              <div class="card-body">
+                <h5 class="card-title">Question text.</h5>
+              </div>
+            </div>
+        </div>
+
+        <!-- Answers Card -->
+        <div class="col-lg-6">
+          <div class="card mt-4">
+            <h3 class="card-header">Answers</h3>
+            <div class="card-body">
+              <button id="button-1" class="btn btn-outline-dark btn-block" value="1"><span></span>Answer 1</span></button>
+              <br>
+              <button id="button-2" class="btn btn-outline-dark btn-block" value="2"><span>Answer 2</span></button>
+              <br>
+              <button id="button-3" class="btn btn-outline-dark btn-block" value="3"><span>Answer 3</span></button>
+              <br>
+              <button id="button-4" class="btn btn-outline-dark btn-block" value="4"><span>Answer 4</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <!-- Score Card -->
+        <div class="card mt-4">
+          <h3 class="card-header">High Scores</h3>
+          <ul class="list-group">
+            <li class="list-group-item">Placeholder</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
       
