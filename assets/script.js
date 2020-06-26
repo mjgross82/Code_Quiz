@@ -1,22 +1,44 @@
-var timerElement = document.querySelector("#timer");
+// Hide quiz and score cards on page load.
+$("#quiz").hide();
+$("#scoreCard").hide();
+$("#hiScoreCard").hide();
 
-var secondsLeft = 60;
+// Wait until the document fully loads to run script.
+$(document).ready(function () {
 
-function setTimer() {
-  var timerInterval = setInterval(function() {
-    secondsLeft--;
-    timerElement.textContent = secondsLeft + " seconds remaining.";
+  // Variables to select the timer, start the timer at 60 seconds, and set the user's score to 0.
+  var timerElement = $("#timer");
+  var secondsLeft = 60;
+  var score = 0;
 
-    if(secondsLeft === 0) {
-      clearInterval(timerInterval);
-      sendMessage();
-    }
+  // Function to start the timer countdown.
+  function setTimer() {
+    var timerInterval = setInterval(function () {
+      secondsLeft--;
+      timerElement.text(secondsLeft + " seconds");
 
-  }, 1000);
-}
+      if (secondsLeft === 0) {
+        clearInterval(timerInterval);
+        sendMessage();
+      }
 
-function sendMessage() {
-  timerElement.textContent = "Time's up!";
-}
+    }, 1000);
+  }
 
-setTimer();
+  // Function that runs when the timer reaches 0.
+  function sendMessage() {
+    timerElement.text("Time's up!");
+  }
+
+  // Event listeners for high score and start buttons.
+  // $("#hiscore").click(hiScores);
+  $("#start").click(q1);
+
+  // Function to hide the title card and initialize Question 1.
+  function q1(event) {
+    $("#title").hide();
+  };
+
+  setTimer();
+
+});

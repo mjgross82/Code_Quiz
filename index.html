@@ -15,10 +15,10 @@
     <!-- Navbar -->
     <nav class="navbar navbar-dark bg-dark">
       <button id="hiscore" class="btn btn-primary btn-light"><span>View High Scores</span></button>
-      <h3 id="timer" class="text-light">Time Remaining</h3>
+      <h3 id="timer" class="text-light">60 Seconds</h3>
     </nav>
     <div class="container">        
-      <div class="row">
+      <div class="row" id="title">
 
         <!-- Title Card -->
         <div class="col-lg-12">
@@ -27,7 +27,7 @@
             <div class="card-body">
               <h5 class="card-title">Directions.</h5>
               <p class="card-text">A timed quiz consisting of five multiple choice questions about the fundamentals of JavaScript. Correct answers add time; incorrect answers take away time. Click start to begin.</p>
-              <button id="button-start" class="btn btn-dark btn-block">Start</button>
+              <button id="start" class="btn btn-dark btn-block">Start</button>
             </div>
             <div class="card-footer text-muted">
               Developed by Michael J. Gross
@@ -36,7 +36,7 @@
         </div>
       </div>
 
-      <div class="row">  
+      <div class="row" id="quiz">  
 
         <!-- Questions Card -->
         <div class="col-lg-6">
@@ -65,7 +65,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" id="scoreCard">
 
         <!-- User Score Card -->
         <div class="col-lg-12">
@@ -79,7 +79,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" id="hiScoreCard">
 
         <!-- High Score Card -->
         <div class="col-lg-12">
